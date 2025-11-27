@@ -16,3 +16,6 @@ Thumbs.db
 # Build artifacts
 node_modules/
 .vercel
+
+# Local settings
+.claude/
