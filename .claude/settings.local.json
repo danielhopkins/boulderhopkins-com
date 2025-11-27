@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(source:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(flarectl dns list:*)",
+      "Bash(flarectl dns delete:*)"
     ],
     "deny": [],
     "ask": []
