@@ -34,6 +34,9 @@ params:
       url: "https://twitter.com/boulderDanH"
     - name: facebook
       url: "https://www.facebook.com/boulderDanielHopkins"
+    - name: aboutme
+      title: About.me
+      url: "https://about.me/dhop"
 
   profileMode:
     enabled: false
