@@ -27,7 +27,13 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/dhopkins"
+      url: "https://github.com/danielhopkins"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/bolderdanh"
+    - name: x
+      url: "https://twitter.com/boulderDanH"
+    - name: facebook
+      url: "https://www.facebook.com/boulderDanielHopkins"
 
   profileMode:
     enabled: false
