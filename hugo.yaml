@@ -1,0 +1,60 @@
+baseURL: https://boulderhopkins.com/
+languageCode: en-us
+title: boulder dan
+theme: PaperMod
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  description: "How-tos and snippets from an engineer"
+  author: Dan Hopkins
+
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "boulder dan"
+    Content: >
+      How-tos and snippets from an engineer
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/dhopkins"
+
+  profileMode:
+    enabled: false
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  tag: tags
+
+markup:
+  highlight:
+    style: monokai
+    lineNos: false
+    codeFences: true
+    guessSyntax: true
