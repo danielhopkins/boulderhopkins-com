@@ -1,6 +1,6 @@
 ---
 date: '2025-12-06T16:59:38-07:00'
-draft: true
+draft: false
 title: 'My Christmas Light Database'
 tags:
     - christmas
