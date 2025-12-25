@@ -10,6 +10,8 @@ tags:
 
 Over the past couple days, I've been on a mission to clean up my music library in [forScore](https://forscore.co/), the sheet music reader I use on my iPad. What started as a simple organization project turned into building custom tooling and developing ideas for how forScore could better support power users and integrations.
 
+The real power tool here was [Claude Code](https://claude.ai/download)—Anthropic's AI coding assistant. It handled the fuzzy matching logic to identify duplicates and normalize inconsistent names, helped build the Rust CLI from scratch, and iterated through the tricky parts like reverse-engineering forScore's binary plist format. Tasks that would have taken me days of trial and error were done in hours.
+
 ## The Problem
 
 My forScore library had grown organically over the years, resulting in:
