@@ -51,6 +51,10 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
+    - identifier: applications
+      name: Applications
+      url: /applications/
+      weight: 25
     - identifier: about
       name: About
       url: /about/
