@@ -128,6 +128,75 @@ hidemeta: true
     animation: aboutFadeUp 0.8s ease 0.4s both;
   }
 
+  /* ---- Experience ---- */
+  .about__experience {
+    max-width: 520px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    animation: aboutFadeUp 0.8s ease 0.45s both;
+  }
+
+  .about__exp-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .about__exp-item:last-child {
+    border-bottom: none;
+  }
+
+  .about__exp-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: var(--accent-softer);
+    padding: 4px;
+  }
+
+  .about__exp-details {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .about__exp-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .about__exp-company {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--secondary);
+    margin: 0.1rem 0 0;
+  }
+
+  .about__exp-date {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--secondary);
+    margin: 0.2rem 0 0;
+  }
+
+  .about__exp-desc {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--content);
+    margin: 0.4rem 0 0;
+    line-height: 1.45;
+    font-style: italic;
+  }
+
   /* ---- Interests ---- */
   .about__section-label {
     font-family: 'Libre Franklin', sans-serif;
@@ -235,12 +304,56 @@ hidemeta: true
 
   <h1 class="about__name">Dan Hopkins</h1>
 
-  <p class="about__role">VP of Engineering at <a href="https://www.stackhawk.com">StackHawk</a></p>
+  <p class="about__role">People and business focused engineering leader at <a href="https://www.stackhawk.com">StackHawk</a></p>
   <p class="about__location">Boulder, Colorado</p>
 
   <hr class="about__divider">
 
-  <p class="about__tagline">Making humans awesome.<br>Building empathy for Security teams.</p>
+  <p class="about__tagline">Developing teams, then software.</p>
+
+  <p class="about__section-label">Experience</p>
+  <div class="about__experience">
+    <div class="about__exp-item">
+      <div class="about__exp-details">
+        <p class="about__exp-title">VP of Engineering</p>
+        <p class="about__exp-company">StackHawk</p>
+        <p class="about__exp-date">Oct 2022 – Present</p>
+        <p class="about__exp-desc">Leading an incredible group of engineers in a high growth startup to disrupt the security tooling world.</p>
+      </div>
+    </div>
+    <div class="about__exp-item">
+      <div class="about__exp-details">
+        <p class="about__exp-title">Director, Engineering</p>
+        <p class="about__exp-company">Splunk</p>
+        <p class="about__exp-date">Jun 2018 – Oct 2022</p>
+        <p class="about__exp-desc">Continuing the battle to make on-call suck less.</p>
+      </div>
+    </div>
+    <div class="about__exp-item">
+      <div class="about__exp-details">
+        <p class="about__exp-title">VP of Engineering</p>
+        <p class="about__exp-company">VictorOps</p>
+        <p class="about__exp-date">Mar 2013 – Jun 2018</p>
+        <p class="about__exp-desc">Built the software. Built the team.</p>
+      </div>
+    </div>
+    <div class="about__exp-item">
+      <div class="about__exp-details">
+        <p class="about__exp-title">Technical Lead, User Acquisition</p>
+        <p class="about__exp-company">LivingSocial</p>
+        <p class="about__exp-date">May 2011 – Mar 2013</p>
+        <p class="about__exp-desc">Leading team of 7 developers to create RESTful services in Scala and web sites in Ruby for 100 million active subscribers.</p>
+      </div>
+    </div>
+    <div class="about__exp-item">
+      <div class="about__exp-details">
+        <p class="about__exp-title">Enterprise Content Management Architect</p>
+        <p class="about__exp-company">Zia Consulting</p>
+        <p class="about__exp-date">Dec 2007 – May 2011</p>
+        <p class="about__exp-desc">Architect and technical lead for small teams building Java and Flex based applications.</p>
+      </div>
+    </div>
+  </div>
 
   <p class="about__section-label">Interests</p>
   <div class="about__tags">
