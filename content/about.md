@@ -38,15 +38,6 @@ hidemeta: true
     animation: aboutFadeUp 0.8s ease both;
   }
 
-  .about__photo-wrap::before {
-    content: "";
-    position: absolute;
-    inset: -8px;
-    border-radius: 50%;
-    border: 2px solid var(--accent-soft);
-    animation: aboutPulseRing 3s ease-in-out infinite;
-  }
-
   .about__photo {
     width: 220px;
     height: 220px;
@@ -227,11 +218,6 @@ hidemeta: true
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  @keyframes aboutPulseRing {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.15; transform: scale(1.04); }
   }
 
   /* ---- Responsive ---- */
