@@ -11,6 +11,9 @@ params:
   description: "How-tos and snippets from an engineer"
   author: Dan Hopkins
 
+  assets:
+    favicon: "favicon.svg"
+
   defaultTheme: auto
   ShowReadingTime: true
   ShowShareButtons: false
