@@ -424,6 +424,12 @@ hidemeta: true
       <p class="about__media-date">Live from AWS re:Invent, Las Vegas &middot; December 2022</p>
       <p class="about__media-desc">Unpacking Werner Vogels' keynote on async, event-driven architecture and what shifting security left means for engineering teams.</p>
     </div>
+    <div class="about__media-item">
+      <p class="about__media-title"><a href="https://speakerdeck.com/danielhopkins/actors-not-just-for-movies-anymore" target="_blank" rel="noopener noreferrer">Actors: Not Just for Movies Anymore</a></p>
+      <p class="about__media-show">SCALE 13x &mdash; Southern California Linux Expo</p>
+      <p class="about__media-date">Los Angeles &middot; February 2015</p>
+      <p class="about__media-desc">Why message-passing and the Actor model beat shared mutable state when clusters grow and 90s-era architectures start to crack.</p>
+    </div>
   </div>
 
   <p class="about__section-label">Interests</p>
