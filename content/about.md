@@ -197,88 +197,6 @@ hidemeta: true
     font-style: italic;
   }
 
-  /* ---- Media & Speaking ---- */
-  .about__heading {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--primary);
-    line-height: 1.2;
-    margin: 0 0 1.25rem;
-    letter-spacing: -0.01em;
-    animation: aboutFadeUp 0.8s ease 0.46s both;
-  }
-
-  .about__heading::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: var(--accent);
-    opacity: 0.5;
-    margin: 0.75rem auto 0;
-  }
-
-  .about__media {
-    max-width: 520px;
-    margin: 0 auto 3rem;
-    text-align: left;
-    animation: aboutFadeUp 0.8s ease 0.48s both;
-  }
-
-  .about__media-item {
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--accent-soft);
-  }
-
-  .about__media-item:last-child {
-    border-bottom: none;
-  }
-
-  .about__media-title {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .about__media-title a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .about__media-title a:hover {
-    color: var(--accent);
-  }
-
-  .about__media-show {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 400;
-    color: var(--secondary);
-    margin: 0.1rem 0 0;
-  }
-
-  .about__media-date {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: var(--secondary);
-    margin: 0.2rem 0 0;
-  }
-
-  .about__media-desc {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--content);
-    margin: 0.4rem 0 0;
-    line-height: 1.45;
-    font-style: italic;
-  }
-
   /* ---- Interests ---- */
   .about__section-label {
     font-family: 'Libre Franklin', sans-serif;
@@ -434,34 +352,6 @@ hidemeta: true
         <p class="about__exp-date">Dec 2007 – May 2011</p>
         <p class="about__exp-desc">Architect and technical lead for small teams building Java and Flex based applications.</p>
       </div>
-    </div>
-  </div>
-
-  <h2 class="about__heading">Media &amp; Speaking</h2>
-  <div class="about__media">
-    <div class="about__media-item">
-      <p class="about__media-title"><a href="https://www.linkedin.com/posts/stackhawk_dont-miss-dans-workshop-at-apidays-new-activity-7190771937072005120-nbtc/" target="_blank" rel="noopener noreferrer">Level Up Your Web &amp; API Security</a></p>
-      <p class="about__media-show">apidays New York &mdash; Workshop</p>
-      <p class="about__media-date">New York &middot; April 2024</p>
-      <p class="about__media-desc">Hands-on workshop on finding and fixing web and API vulnerabilities, with a live walk-through of StackHawk against a real app.</p>
-    </div>
-    <div class="about__media-item">
-      <p class="about__media-title"><a href="https://developerweek2024.sched.com/event/1ZQOQ/virtual-open-talk-shifted-left-moving-from-a-reactive-to-proactive-mindset" target="_blank" rel="noopener noreferrer">Shifted Left: Moving from a Reactive to Proactive Mindset</a></p>
-      <p class="about__media-show">DeveloperWeek 2024 &mdash; Virtual OPEN Expo Discovery Stage</p>
-      <p class="about__media-date">Virtual &middot; February 2024</p>
-      <p class="about__media-desc">Tracing shift-left from its agile and DevOps roots to today, and what a proactive security mindset actually looks like in engineering practice.</p>
-    </div>
-    <div class="about__media-item">
-      <p class="about__media-title"><a href="https://cloudfix.com/podcast/werner-vogels-reinvent-keynote-pulled-us-into-his-matrix-vision-of-the-future-live-from-las-vegas-with-stackhawk/" target="_blank" rel="noopener noreferrer">Werner Vogels' re:Invent Keynote Pulled Us Into His Matrix Vision of the Future</a></p>
-      <p class="about__media-show">AWS Insiders podcast &mdash; with Hilary Doyle &amp; Rahul Subramaniam</p>
-      <p class="about__media-date">Live from AWS re:Invent, Las Vegas &middot; December 2022</p>
-      <p class="about__media-desc">Unpacking Werner Vogels' keynote on async, event-driven architecture and what shifting security left means for engineering teams.</p>
-    </div>
-    <div class="about__media-item">
-      <p class="about__media-title"><a href="https://speakerdeck.com/danielhopkins/actors-not-just-for-movies-anymore" target="_blank" rel="noopener noreferrer">Actors: Not Just for Movies Anymore</a></p>
-      <p class="about__media-show">SCALE 13x &mdash; Southern California Linux Expo</p>
-      <p class="about__media-date">Los Angeles &middot; February 2015</p>
-      <p class="about__media-desc">Why message-passing and the Actor model beat shared mutable state when clusters grow and 90s-era architectures start to crack.</p>
     </div>
   </div>
 

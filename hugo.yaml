@@ -58,6 +58,10 @@ menu:
       name: Applications
       url: /applications/
       weight: 25
+    - identifier: speaking
+      name: Speaking
+      url: /speaking/
+      weight: 27
     - identifier: about
       name: About
       url: /about/
