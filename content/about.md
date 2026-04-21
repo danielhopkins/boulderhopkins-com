@@ -197,6 +197,67 @@ hidemeta: true
     font-style: italic;
   }
 
+  /* ---- Media & Speaking ---- */
+  .about__media {
+    max-width: 520px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    animation: aboutFadeUp 0.8s ease 0.48s both;
+  }
+
+  .about__media-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .about__media-item:last-child {
+    border-bottom: none;
+  }
+
+  .about__media-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .about__media-title a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .about__media-title a:hover {
+    color: var(--accent);
+  }
+
+  .about__media-show {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--secondary);
+    margin: 0.1rem 0 0;
+  }
+
+  .about__media-date {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--secondary);
+    margin: 0.2rem 0 0;
+  }
+
+  .about__media-desc {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--content);
+    margin: 0.4rem 0 0;
+    line-height: 1.45;
+    font-style: italic;
+  }
+
   /* ---- Interests ---- */
   .about__section-label {
     font-family: 'Libre Franklin', sans-serif;
@@ -352,6 +413,16 @@ hidemeta: true
         <p class="about__exp-date">Dec 2007 – May 2011</p>
         <p class="about__exp-desc">Architect and technical lead for small teams building Java and Flex based applications.</p>
       </div>
+    </div>
+  </div>
+
+  <p class="about__section-label">Media &amp; Speaking</p>
+  <div class="about__media">
+    <div class="about__media-item">
+      <p class="about__media-title"><a href="https://cloudfix.com/podcast/werner-vogels-reinvent-keynote-pulled-us-into-his-matrix-vision-of-the-future-live-from-las-vegas-with-stackhawk/" target="_blank" rel="noopener noreferrer">Werner Vogels' re:Invent Keynote Pulled Us Into His Matrix Vision of the Future</a></p>
+      <p class="about__media-show">AWS Insiders podcast &mdash; with Hilary Doyle &amp; Rahul Subramaniam</p>
+      <p class="about__media-date">Live from AWS re:Invent, Las Vegas &middot; December 2022</p>
+      <p class="about__media-desc">Unpacking Werner Vogels' keynote on async, event-driven architecture and what shifting security left means for engineering teams.</p>
     </div>
   </div>
 
