@@ -419,6 +419,12 @@ hidemeta: true
   <p class="about__section-label">Media &amp; Speaking</p>
   <div class="about__media">
     <div class="about__media-item">
+      <p class="about__media-title"><a href="https://www.linkedin.com/posts/stackhawk_dont-miss-dans-workshop-at-apidays-new-activity-7190771937072005120-nbtc/" target="_blank" rel="noopener noreferrer">Level Up Your Web &amp; API Security</a></p>
+      <p class="about__media-show">apidays New York &mdash; Workshop</p>
+      <p class="about__media-date">New York &middot; April 2024</p>
+      <p class="about__media-desc">Hands-on workshop on finding and fixing web and API vulnerabilities, with a live walk-through of StackHawk against a real app.</p>
+    </div>
+    <div class="about__media-item">
       <p class="about__media-title"><a href="https://cloudfix.com/podcast/werner-vogels-reinvent-keynote-pulled-us-into-his-matrix-vision-of-the-future-live-from-las-vegas-with-stackhawk/" target="_blank" rel="noopener noreferrer">Werner Vogels' re:Invent Keynote Pulled Us Into His Matrix Vision of the Future</a></p>
       <p class="about__media-show">AWS Insiders podcast &mdash; with Hilary Doyle &amp; Rahul Subramaniam</p>
       <p class="about__media-date">Live from AWS re:Invent, Las Vegas &middot; December 2022</p>
