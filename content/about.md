@@ -198,6 +198,27 @@ hidemeta: true
   }
 
   /* ---- Media & Speaking ---- */
+  .about__heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+    animation: aboutFadeUp 0.8s ease 0.46s both;
+  }
+
+  .about__heading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.5;
+    margin: 0.75rem auto 0;
+  }
+
   .about__media {
     max-width: 520px;
     margin: 0 auto 3rem;
@@ -416,13 +437,19 @@ hidemeta: true
     </div>
   </div>
 
-  <p class="about__section-label">Media &amp; Speaking</p>
+  <h2 class="about__heading">Media &amp; Speaking</h2>
   <div class="about__media">
     <div class="about__media-item">
       <p class="about__media-title"><a href="https://www.linkedin.com/posts/stackhawk_dont-miss-dans-workshop-at-apidays-new-activity-7190771937072005120-nbtc/" target="_blank" rel="noopener noreferrer">Level Up Your Web &amp; API Security</a></p>
       <p class="about__media-show">apidays New York &mdash; Workshop</p>
       <p class="about__media-date">New York &middot; April 2024</p>
       <p class="about__media-desc">Hands-on workshop on finding and fixing web and API vulnerabilities, with a live walk-through of StackHawk against a real app.</p>
+    </div>
+    <div class="about__media-item">
+      <p class="about__media-title"><a href="https://developerweek2024.sched.com/event/1ZQOQ/virtual-open-talk-shifted-left-moving-from-a-reactive-to-proactive-mindset" target="_blank" rel="noopener noreferrer">Shifted Left: Moving from a Reactive to Proactive Mindset</a></p>
+      <p class="about__media-show">DeveloperWeek 2024 &mdash; Virtual OPEN Expo Discovery Stage</p>
+      <p class="about__media-date">Virtual &middot; February 2024</p>
+      <p class="about__media-desc">Tracing shift-left from its agile and DevOps roots to today, and what a proactive security mindset actually looks like in engineering practice.</p>
     </div>
     <div class="about__media-item">
       <p class="about__media-title"><a href="https://cloudfix.com/podcast/werner-vogels-reinvent-keynote-pulled-us-into-his-matrix-vision-of-the-future-live-from-las-vegas-with-stackhawk/" target="_blank" rel="noopener noreferrer">Werner Vogels' re:Invent Keynote Pulled Us Into His Matrix Vision of the Future</a></p>
