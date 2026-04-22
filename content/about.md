@@ -61,9 +61,9 @@ hidemeta: true
   }
 
   /* ---- Name ---- */
-  .about__name {
+  .about .about__name {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 600;
     color: var(--primary);
     line-height: 1.1;
@@ -290,8 +290,10 @@ hidemeta: true
   }
 
   /* ---- Responsive ---- */
+  @media (max-width: 640px) {
+    .about .about__name { font-size: 2.2rem; }
+  }
   @media (max-width: 480px) {
-    .about__name { font-size: 2.4rem; }
     .about__tagline { font-size: 1.3rem; }
     .about__photo { width: 180px; height: 180px; }
   }

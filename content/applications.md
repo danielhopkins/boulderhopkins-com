@@ -34,7 +34,7 @@ hidemeta: true
     animation: appsFadeUp 0.8s ease both;
   }
 
-  .apps__title {
+  .apps .apps__title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.8rem;
     font-weight: 600;
@@ -212,6 +212,9 @@ hidemeta: true
   }
 
   /* ---- Responsive ---- */
+  @media (max-width: 640px) {
+    .apps .apps__title { font-size: 2.2rem; }
+  }
   @media (max-width: 540px) {
     .apps__card {
       grid-template-columns: 1fr;
@@ -221,7 +224,6 @@ hidemeta: true
 
     .apps__tags { justify-content: center; }
     .apps__links { justify-content: center; }
-    .apps__title { font-size: 2.2rem; }
     .apps__screenshot { width: 220px; }
   }
 </style>

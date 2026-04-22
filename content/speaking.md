@@ -34,7 +34,7 @@ hidemeta: true
     animation: speakingFadeUp 0.8s ease both;
   }
 
-  .speaking__title {
+  .speaking .speaking__title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.8rem;
     font-weight: 600;
@@ -136,8 +136,10 @@ hidemeta: true
   }
 
   /* ---- Responsive ---- */
+  @media (max-width: 640px) {
+    .speaking .speaking__title { font-size: 2.2rem; }
+  }
   @media (max-width: 480px) {
-    .speaking__title { font-size: 2.2rem; }
     .speaking__item-title { font-size: 1.25rem; }
   }
 </style>

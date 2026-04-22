@@ -1,0 +1,321 @@
+/* ============================================================
+   Editorial design — applies the About/Applications/Speaking
+   aesthetic to PaperMod's stock home, post list, post single,
+   and tag pages.
+   ============================================================ */
+
+:root {
+  --bd-accent: #305B90;
+  --bd-accent-soft: rgba(48, 91, 144, 0.12);
+  --bd-accent-softer: rgba(48, 91, 144, 0.06);
+}
+
+[data-theme="dark"] {
+  --bd-accent: #6FA3D8;
+  --bd-accent-soft: rgba(111, 163, 216, 0.15);
+  --bd-accent-softer: rgba(111, 163, 216, 0.06);
+}
+
+/* Unify background across list pages (home, /posts, /tags) and single pages.
+   PaperMod's theme sets .list { background: var(--code-bg) } — the gray card.
+   For the editorial look we want the same white/theme bg everywhere. */
+.list {
+  background: var(--theme);
+}
+
+/* ---- Home hero (.home-info) ------------------------------- */
+
+.first-entry.home-info {
+  text-align: center;
+  min-height: 0;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--bd-accent-soft);
+  margin-bottom: 3rem;
+}
+
+.first-entry.home-info .entry-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0 0 0.6rem;
+}
+
+.first-entry.home-info .entry-content {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--secondary);
+  line-height: 1.5;
+  max-width: 40ch;
+  margin: 0 auto 1.75rem;
+}
+
+.first-entry.home-info .entry-footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---- Post list cards (first-entry + post-entry) ----------- */
+
+.first-entry:not(.home-info),
+.post-entry {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--bd-accent-soft);
+  padding: 1.5rem 0.25rem 1.75rem;
+  margin: 0;
+  min-height: 0;
+  transition: background 0.15s ease;
+}
+
+.first-entry:not(.home-info):hover,
+.post-entry:hover {
+  background: var(--bd-accent-softer);
+}
+
+.first-entry:not(.home-info):active,
+.post-entry:active {
+  transform: none;
+}
+
+.post-entry:last-of-type {
+  border-bottom: none;
+}
+
+.first-entry:not(.home-info) .entry-header h1,
+.post-entry .entry-header h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+  color: var(--primary);
+  margin: 0 0 0.45rem;
+}
+
+.entry-content {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--secondary);
+  margin: 0.35rem 0 0.6rem;
+}
+
+.entry-footer {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--secondary);
+}
+
+/* ---- Page titles (list headers, single post title) -------- */
+
+.page-header h1,
+.post-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.post-description {
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--secondary);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.post-meta,
+.breadcrumbs {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--secondary);
+}
+
+.breadcrumbs a {
+  font-size: 0.72rem;
+}
+
+/* Post body — keep readable width, serif headings, sans body */
+.post-content {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.post-content h2 { font-size: 1.75rem; }
+.post-content h3 { font-size: 1.4rem; }
+
+.post-content a {
+  text-decoration: none;
+  box-shadow: 0 1px 0 var(--bd-accent);
+  transition: background 0.2s ease;
+}
+
+.post-content a:hover {
+  background: var(--bd-accent-softer);
+}
+
+/* ---- Section page headers (e.g. Tech Blog on /posts/) ------ */
+
+.page-header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+}
+
+.page-header p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--secondary);
+}
+
+/* ---- Tag pills (/tags/) ----------------------------------- */
+
+.terms-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 0;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.terms-tags li {
+  display: inline-flex;
+  margin: 0;
+  font-weight: 400;
+}
+
+.terms-tags a {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--primary);
+  background: var(--bd-accent-softer);
+  border: 1px solid var(--bd-accent-soft);
+  border-radius: 100px;
+  padding: 0.45em 1.15em;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              color 0.2s ease, transform 0.2s ease;
+}
+
+.terms-tags a:hover {
+  background: var(--bd-accent-soft);
+  border-color: var(--bd-accent);
+  color: var(--bd-accent);
+  transform: translateY(-1px);
+}
+
+.terms-tags a:active {
+  background: var(--bd-accent-soft);
+  transform: translateY(0);
+}
+
+.terms-tags a sup {
+  color: var(--secondary);
+  font-size: 0.72em;
+  margin-left: 0.3em;
+}
+
+/* ---- Pagination (prev/next) ------------------------------- */
+
+.pagination {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.pagination a {
+  background: transparent;
+  border: 1px solid var(--bd-accent-soft);
+  border-radius: 100px;
+  color: var(--secondary);
+  padding: 0.5rem 1.3rem;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              color 0.2s ease;
+}
+
+.pagination a:hover {
+  background: var(--bd-accent-softer);
+  border-color: var(--bd-accent);
+  color: var(--bd-accent);
+}
+
+/* ---- Fade-up animation (matches About/Applications/Speaking) ---- */
+
+@keyframes editorialFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* List pages (/posts, /tags, home) */
+  .page-header,
+  .first-entry.home-info,
+  .terms-tags {
+    animation: editorialFadeUp 0.8s ease both;
+  }
+
+  /* Staggered list items — post list cards and tag pills */
+  .post-entry,
+  .first-entry:not(.home-info),
+  .terms-tags li {
+    animation: editorialFadeUp 0.8s ease both;
+    animation-delay: 0.15s;
+  }
+  .post-entry:nth-of-type(2),
+  .terms-tags li:nth-of-type(2) { animation-delay: 0.25s; }
+  .post-entry:nth-of-type(3),
+  .terms-tags li:nth-of-type(3) { animation-delay: 0.35s; }
+  .post-entry:nth-of-type(4),
+  .terms-tags li:nth-of-type(4) { animation-delay: 0.45s; }
+  .post-entry:nth-of-type(5),
+  .terms-tags li:nth-of-type(5) { animation-delay: 0.55s; }
+  .post-entry:nth-of-type(n+6),
+  .terms-tags li:nth-of-type(n+6) { animation-delay: 0.65s; }
+
+  /* Single post page — header, meta, body */
+  .post-title,
+  .post-description {
+    animation: editorialFadeUp 0.8s ease both;
+  }
+  .post-description { animation-delay: 0.1s; }
+  .post-meta { animation: editorialFadeUp 0.8s ease 0.2s both; }
+  .post-content { animation: editorialFadeUp 0.8s ease 0.3s both; }
+  .post-footer { animation: editorialFadeUp 0.8s ease 0.4s both; }
+}
+
+/* ---- Responsive ------------------------------------------- */
+
+@media (max-width: 640px) {
+  .first-entry.home-info .entry-header h1 { font-size: 2.4rem; }
+  .page-header h1,
+  .post-title { font-size: 2.2rem; }
+  .first-entry:not(.home-info) .entry-header h1,
+  .post-entry .entry-header h2 { font-size: 1.4rem; }
+  .post-content h2 { font-size: 1.5rem; }
+  .post-content h3 { font-size: 1.25rem; }
+}
