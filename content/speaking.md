@@ -53,16 +53,6 @@ hidemeta: true
     margin: 0;
   }
 
-  .speaking__title::after {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 2px;
-    background: var(--accent);
-    opacity: 0.5;
-    margin: 1rem auto 0.9rem;
-  }
-
   /* ---- Item List ---- */
   .speaking__list {
     max-width: 640px;
