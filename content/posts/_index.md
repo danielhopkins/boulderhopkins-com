@@ -1,5 +1,5 @@
 ---
 title: "Tech Blog"
-description: "How-tos and snippets from an engineer"
+description: "Notes from the terminal — on building, leading, and tinkering"
 ShowBreadCrumbs: false
 ---
