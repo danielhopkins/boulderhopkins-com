@@ -9,6 +9,10 @@ tags:
     - stackhawk
     - claude-code
 canonicalURL: https://www.linkedin.com/pulse/how-stackhawk-adopted-ai-drastically-accelerate-dan-hopkins-sghac/
+cover:
+    image: /images/stackhawk-ai-adoption-cover.png
+    alt: "Cartoon robot at a laptop shouting 'Enhance! Optimize! Ship it!' while a StackHawk hawk flies overhead and startled engineers look on — with an 'AI Fuel' jar of jellybeans and a +8x badge."
+    relative: false
 ---
 
 Is adopting AI-assisted development as hard as learning to code all over again? Or is it more like learning a new text editor—a few keybindings and you're off?
