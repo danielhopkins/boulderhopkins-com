@@ -19,7 +19,7 @@ One approach (the merits depend on the project) to migration is load a bunch of 
 
 ### Command Servlet
 
-There is an old (from the age of the documentation) servlet that can run arbitrary javascript that seems to fit the bill except that it will only run code stored as nodes in the repository and only in "insecure" mode, which means no access to native java and you have to develop over cifs/webdav or directly in a wysiwig editor in Alfresco.  None if this is ideal.
+There is an old (from the age of the documentation) servlet that can run arbitrary javascript that seems to fit the bill except that it will only run code stored as nodes in the repository and only in "insecure" mode, which means no access to native java and you have to develop over cifs/webdav or directly in a wysiwig editor in Alfresco.  None of this is ideal.
 
 [Command Servlet](http://wiki.alfresco.com/wiki/URL_Addressability#CommandServlet)
 
