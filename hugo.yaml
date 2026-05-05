@@ -37,6 +37,9 @@ params:
       url: "https://twitter.com/boulderDanH"
     - name: facebook
       url: "https://www.facebook.com/boulderDanielHopkins"
+    - name: goodreads
+      title: Goodreads
+      url: "https://www.goodreads.com/user/show/26170210-dan-hopkins"
     - name: aboutme
       title: About.me
       url: "https://about.me/dhop"
