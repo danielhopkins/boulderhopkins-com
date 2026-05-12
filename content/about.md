@@ -105,12 +105,15 @@ hidemeta: true
   }
 
   /* ---- Divider ---- */
-  .about__divider {
+  .about hr.about__divider {
     width: 48px;
     height: 2px;
     background: var(--accent);
     border: none;
-    margin: 0 auto 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
     opacity: 0.5;
     animation: aboutFadeUp 0.8s ease 0.35s both;
   }
@@ -128,6 +131,32 @@ hidemeta: true
     animation: aboutFadeUp 0.8s ease 0.4s both;
   }
 
+  /* ---- Summary ---- */
+  .about__summary {
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    animation: aboutFadeUp 0.8s ease 0.42s both;
+  }
+
+  .about__summary p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--content);
+    line-height: 1.65;
+    margin: 0 0 1rem;
+  }
+
+  .about__summary p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about__summary strong {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
   /* ---- Experience ---- */
   .about__experience {
     max-width: 520px;
@@ -138,16 +167,21 @@ hidemeta: true
 
   .about__exp-item {
     display: flex;
+    align-items: flex-start;
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .about__exp-item p {
+    margin-bottom: 0;
   }
 
   .about__exp-item:last-child {
     border-bottom: none;
   }
 
-  .about__exp-logo {
+  .about img.about__exp-logo {
     width: 40px;
     height: 40px;
     border-radius: 8px;
@@ -155,6 +189,7 @@ hidemeta: true
     flex-shrink: 0;
     background: var(--accent-softer);
     padding: 4px;
+    margin: 0;
   }
 
   .about__exp-details {
@@ -195,6 +230,55 @@ hidemeta: true
     margin: 0.4rem 0 0;
     line-height: 1.45;
     font-style: italic;
+  }
+
+  /* ---- Medal bar ---- */
+  .about__medal-bar {
+    display: inline-block;
+    width: 56px;
+    height: 11px;
+    border-radius: 1px;
+    margin: 0.3rem 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .about__medal-bar--stackhawk {
+    background: linear-gradient(to right, #00C0C0 0 33%, #2C4D5C 33% 66%, #00C0C0 66% 100%);
+  }
+  .about__medal-bar--splunk {
+    background: linear-gradient(to right, #65A637 0 33%, #1A1A1A 33% 66%, #F99D1C 66% 100%);
+  }
+  .about__medal-bar--victorops {
+    background: linear-gradient(to right, #E8A33D 0 33%, #2F3E46 33% 66%, #E8A33D 66% 100%);
+  }
+  .about__medal-bar--livingsocial {
+    background: linear-gradient(to right, #D71920 0 33%, #FFFFFF 33% 66%, #D71920 66% 100%);
+  }
+  .about__medal-bar--zia {
+    background: linear-gradient(to right, #A00000 0 33%, #666666 33% 66%, #A00000 66% 100%);
+  }
+
+  .about__exp-roles {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem 0 0;
+  }
+
+  .about__exp-role {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--content);
+    line-height: 1.5;
+    padding: 0.3rem 0 0.3rem 0.75rem;
+    border-left: 2px solid var(--accent-soft);
+    margin: 0.3rem 0;
+  }
+
+  .about__exp-role strong {
+    font-weight: 600;
+    color: var(--primary);
   }
 
   /* ---- Interests ---- */
@@ -306,53 +390,72 @@ hidemeta: true
 
   <h1 class="about__name">Dan Hopkins</h1>
 
-  <p class="about__role">People and business focused engineering leader at <a href="https://www.stackhawk.com">StackHawk</a></p>
+  <p class="about__role">CTO / VP Engineering · Ex-<a href="https://www.splunk.com">Splunk</a> · Founding-era <a href="https://victorops.com">VictorOps</a> · Security &amp; Dev Tools</p>
   <p class="about__location">Boulder, Colorado</p>
 
   <hr class="about__divider">
 
-  <p class="about__tagline">Developing teams, then software.</p>
+  <p class="about__section-label">Summary</p>
+  <div class="about__summary">
+    <p>Three engineering orgs, three different stages. Joined <strong>VictorOps</strong> as a founding-era engineer and took ARR from $0 → $10M through the Splunk acquisition, then stayed at Splunk to grow on-call from $10M → $20M and lead within a 350-person engineering team. Most recently led <strong>StackHawk</strong> from $1M → $5M ARR with a small 10-person team, landing Coca-Cola, McDonald's, and ITV.</p>
+    <p>I build small teams that out-ship larger ones. At StackHawk we roughly doubled engineering output (~500 → ~1,000 PRs/quarter, same headcount) by standardizing on Claude Code and rebuilding the SDLC around it. One of the earliest serious bets on AI-native engineering I've seen in production.</p>
+  </div>
 
   <p class="about__section-label">Experience</p>
   <div class="about__experience">
     <div class="about__exp-item">
+      <img class="about__exp-logo" src="/images/logos/stackhawk.png" alt="StackHawk logo">
       <div class="about__exp-details">
         <p class="about__exp-title">VP of Engineering</p>
         <p class="about__exp-company">StackHawk</p>
-        <p class="about__exp-date">Oct 2022 – Present</p>
-        <p class="about__exp-desc">Leading an incredible group of engineers in a high growth startup to disrupt the security tooling world.</p>
+        <p class="about__exp-date">Oct 2022 – May 2026</p>
+        <span class="about__medal-bar about__medal-bar--stackhawk" aria-hidden="true"></span>
+        <p class="about__exp-desc">Grew ARR $1M → $5M with a 10-person team. Landed F500 customers (Coca-Cola, McDonald's, ITV) and pioneered AI-first engineering.</p>
       </div>
     </div>
     <div class="about__exp-item">
+      <img class="about__exp-logo" src="/images/logos/splunk.png" alt="Splunk logo">
       <div class="about__exp-details">
         <p class="about__exp-title">Director, Engineering</p>
         <p class="about__exp-company">Splunk</p>
         <p class="about__exp-date">Jun 2018 – Oct 2022</p>
-        <p class="about__exp-desc">Continuing the battle to make on-call suck less.</p>
+        <span class="about__medal-bar about__medal-bar--splunk" aria-hidden="true"></span>
+        <p class="about__exp-desc">Owned Splunk On-Call: $10M → $20M ARR, 1,000+ customers. Architected Incident Intelligence and led acquisition integration.</p>
       </div>
     </div>
     <div class="about__exp-item">
+      <img class="about__exp-logo" src="/images/logos/victorops.png" alt="VictorOps logo">
       <div class="about__exp-details">
         <p class="about__exp-title">VP of Engineering</p>
         <p class="about__exp-company">VictorOps</p>
         <p class="about__exp-date">Mar 2013 – Jun 2018</p>
-        <p class="about__exp-desc">Built the software. Built the team.</p>
+        <span class="about__medal-bar about__medal-bar--victorops" aria-hidden="true"></span>
+        <p class="about__exp-desc">Founding-era engineer who built the software, built the team, and built the business. Took ARR $0 → $10M and led the technical due diligence for the 2018 acquisition by Splunk.</p>
+        <ul class="about__exp-roles">
+          <li class="about__exp-role"><strong>Sr. Software Engineer:</strong> Only experienced Scala engineer on a senior Java team. Built the chat platform and distributed broadcasting system that powered incident notification at scale.</li>
+          <li class="about__exp-role"><strong>Technical Lead, Platform:</strong> Partnered with the CTO to set the platform's technical direction during the highest-growth phase.</li>
+          <li class="about__exp-role"><strong>VP of Engineering:</strong> Hired and mentored the leadership bench, led the technical due diligence for the Splunk acquisition, and kept shipping product features hands-on.</li>
+        </ul>
       </div>
     </div>
     <div class="about__exp-item">
+      <img class="about__exp-logo" src="/images/logos/livingsocial.png" alt="LivingSocial logo">
       <div class="about__exp-details">
         <p class="about__exp-title">Technical Lead, User Acquisition</p>
         <p class="about__exp-company">LivingSocial</p>
         <p class="about__exp-date">May 2011 – Mar 2013</p>
-        <p class="about__exp-desc">Leading team of 7 developers to create RESTful services in Scala and web sites in Ruby for 100 million active subscribers.</p>
+        <span class="about__medal-bar about__medal-bar--livingsocial" aria-hidden="true"></span>
+        <p class="about__exp-desc">Led 7 engineers building Scala services and Ruby web for 100M+ subscribers. Owned user acquisition.</p>
       </div>
     </div>
     <div class="about__exp-item">
+      <img class="about__exp-logo" src="/images/logos/zia.png" alt="Zia Consulting logo">
       <div class="about__exp-details">
         <p class="about__exp-title">Enterprise Content Management Architect</p>
         <p class="about__exp-company">Zia Consulting</p>
         <p class="about__exp-date">Dec 2007 – May 2011</p>
-        <p class="about__exp-desc">Architect and technical lead for small teams building Java and Flex based applications.</p>
+        <span class="about__medal-bar about__medal-bar--zia" aria-hidden="true"></span>
+        <p class="about__exp-desc">Architect and tech lead for Java and Flex applications on the Alfresco CMS platform.</p>
       </div>
     </div>
   </div>
