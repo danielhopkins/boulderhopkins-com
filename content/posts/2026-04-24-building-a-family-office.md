@@ -1,7 +1,7 @@
 ---
 date: '2026-04-24T10:00:00-06:00'
 draft: false
-title: 'How I Built a Family Office'
+title: 'How I Built an Agentic Family Office'
 summary: "A DIY version of what the rich have: a team of specialists coordinating your money, running on my home server. What is in it, what it caught, and why the posture matters more than the tooling."
 tags:
     - ai
