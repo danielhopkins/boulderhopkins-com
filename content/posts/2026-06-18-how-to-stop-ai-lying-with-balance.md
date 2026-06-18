@@ -1,6 +1,6 @@
 ---
 date: '2026-06-18T10:00:00-06:00'
-draft: true
+draft: false
 title: 'How to Stop AI From Lying to You With "Balance"'
 summary: "Everyone worries about AI making things up or refusing to answer. The trickier failure is the calm, balanced-sounding answer that treats settled science and bad-faith contrarianism as a coin flip. Here's how to spot it and ask your way past it."
 tags:
