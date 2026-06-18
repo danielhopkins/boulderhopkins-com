@@ -1,0 +1,89 @@
+---
+date: '2026-06-18T10:00:00-06:00'
+draft: true
+title: 'How to Stop AI From Lying to You With "Balance"'
+summary: "Everyone worries about AI making things up or refusing to answer. The trickier failure is the calm, balanced-sounding answer that treats settled science and bad-faith contrarianism as a coin flip. Here's how to spot it and ask your way past it."
+tags:
+    - ai
+    - epistemics
+    - critical-thinking
+---
+
+## The thing AI is genuinely great at
+
+One of the best uses I've found for AI is having the conversation I've always wanted to have but never had the right person for. How does relativity actually work? How does the Fed moving interest rates ripple out into the rest of the economy? With a little distance now, what does the evidence really say about how we handled COVID?
+
+I'd carried questions like that around for years. The answers exist — I just didn't know anyone with real depth in the right area. My doctor knows medicine, not monetary policy. The friend who can walk me through relativity checks out the moment immunology comes up. With AI you can finally chase a question wherever it goes, with something that knows a little about almost everything, and you can ask the dumb follow-up you'd be too embarrassed to put to a real expert.
+
+## The third failure mode
+
+Ask an AI about something contested — COVID vaccines, puberty blockers, where the virus came from — and you're probably braced for one of two ways it can go wrong. Either it makes something up, or it clams up and won't engage.
+
+There's a third way, and it's the one that actually gets people. The answer comes back perfectly even-handed, and that even-handedness quietly misrepresents what's known, because it treats settled expert opinion and politically motivated contrarianism as if they carry the same weight. It reads as careful, and because it reads as careful, it's the version most likely to fool you. It's epistemological theater: the look of rigor without any of the work.
+
+Here's the shape of it. Ask how well the COVID vaccines worked and you'll get something like, "Supporters point to reduced mortality, while critics raise concerns about transmission and shifting guidance." Sounds reasonable. But it smuggles the political fight over how the vaccines were talked about into what's dressed up as a scientific fight over whether they worked. Those are two different arguments.
+
+The "both sides" instinct mashes together three things that aren't the same:
+
+- Real scientific uncertainty, where the evidence genuinely has gaps and experts are still arguing.
+- Communication failure, where the science was fine but the people explaining it did a bad job.
+- Manufactured controversy, where someone with an agenda is using the topic as a wedge.
+
+All three are real, and each one calls for a different response. Blur them together and you get an answer that feels balanced while pointing you the wrong way.
+
+## Three kinds of "controversy"
+
+It helps to notice that not every fight is built the same way.
+
+Some questions are genuinely open among experts. The field itself is split, with serious, credentialed people doing real work on more than one side. The exact mechanisms behind long COVID are like this. So are the long-term effects of puberty blockers on the developing adolescent brain.
+
+Some questions are settled but still loud. The experts have largely landed, but political actors keep the fight alive anyway. Nothing changed about the evidence; the noise just kept going. Vaccine safety in general sits here. So does human-caused climate change.
+
+And some questions have a sliver of real uncertainty that's been taken over by people arguing in bad faith. There's a legitimate open question buried in there, but the people shouting about it aren't actually engaging with it. COVID origins is the clearest case. Whether it was a lab leak or a natural spillover is a real open question — but the virus wasn't engineered, that part isn't in doubt, and most of the people loudest about origins are using it to go after institutions, not to track down an answer.
+
+When an AI flattens all three into the same shape, it isn't helping you.
+
+## The moves to watch for
+
+Once you start looking, the same handful of moves show up again and again.
+
+The first is padding the case with things that don't belong to it. You ask a narrow question, and the answer drags in a pile of adjacent examples to make a thin point look heavy. Ask about federal vaccine mandates and you'll hear about military shots, school requirements, employer rules — all of which have been around forever — as if they add up to some sweeping new overreach. Press on it and the whole thing shrinks to a single OSHA rule that got struck down before it ever took effect.
+
+The second is measuring against the wrong yardstick. The COVID vaccines get held up against something like the measles vaccine, which gives you sterilizing, lifelong immunity, instead of the flu vaccine, which is the honest comparison for a fast-mutating respiratory virus. Judge them against the flu shot and the "failure" mostly evaporates.
+
+The third is treating four different kinds of failure as one big one. The science being wrong, the messaging being bad, the institutions losing trust, the policy going too far — those are separate problems. Lump them together and a botched press conference starts to count as proof the science was wrong, or an overreaching mandate becomes evidence the consensus was cooked up.
+
+The last is handing too much credibility to whoever happens to be standing nearby politically. An epidemiologist with thirty years of peer-reviewed work flagging a specific methodological problem is not the same as a senator quoting that flag in a press release. AI tends to blur the two instead of saying out loud which is which.
+
+## How to prompt your way out
+
+You're not trying to get the AI to pick a side. You're trying to get it to lay out what's actually known — where the evidence is solid, where it's thin, and where politics has crept into a question that should be empirical. A few prompts pull it back in that direction.
+
+Ask what the experts actually think, and ask it first: "What do people with peer-reviewed work in this field actually conclude?" You want the consensus on the table before any of the noise gets stirred in.
+
+Ask who's who: "Which of these sources are domain experts, and which are commentators or politicians?" A clinical trial, a systematic review, an observational study, a policy memo, and a press release are not the same animal, and it's worth making the AI say so.
+
+Ask what kind of disagreement this is: "Are scientists actually split here, or has a settled question just gotten politically hot?" That one question separates "we don't know" from "people are mad," which look identical from the outside and need completely different answers.
+
+Ask about the yardstick: "What's the right thing to be comparing this against?" It catches the wrong-comparison move before it warps everything downstream.
+
+And make it argue both ends honestly: "Give me the strongest version of the mainstream position, then the strongest fair objection to it." You get the real expert view that way, instead of one that's been watered down in advance.
+
+## The bigger picture
+
+There's a reason this keeps happening. We're living through a stretch where expertise has been knocked down on purpose, as a political strategy. People who actually spent years learning how something works — putting in the time, getting things wrong, answering to peers who'd catch them — keep getting set on the same level as people whose real talent is sounding confident.
+
+AI learns from us, and it picks this up. When the people rating its answers have spent a decade marinating in "both sides" coverage, they'll reward an answer that feels balanced even when the balance is fake. So you end up with a system that can mislead you in the calmest, most reasonable-sounding voice imaginable.
+
+The fix isn't an AI that takes sides. It's one that's epistemically honest — one that'll come right out and say when a "debate" isn't being argued in good faith, when the science is solid even though the topic is radioactive, and when the controversy is mostly manufactured. Getting that out of it still falls partly on you, and on knowing what to ask.
+
+## Where to build these skills
+
+A couple of things sharpened how I think about this:
+
+- **[Professor Dave Explains](https://www.youtube.com/@ProfessorDaveExplains)** has spent years taking apart pseudoscience on YouTube. The debunks themselves are fun, but the real payoff is watching him name the moves — the cherry-picked study, the lone credentialed crank, the scrap of genuine uncertainty stretched into a wall of doubt. Once you've seen them named, you can't unsee them, including in what an AI hands you.
+- **[Decoding the Gurus](https://decoding-the-gurus.captivate.fm/)** has an anthropologist and a psychologist pick apart the "secular gurus" — the people who build big followings playing the brave outsider. Their method for telling a real independent thinker from someone just performing the role is exactly what you want in your back pocket when an AI starts "presenting multiple perspectives."
+
+---
+
+*This came out of two long back-and-forths with Claude, one about COVID vaccine science and one about pediatric gender medicine. Same pattern both times: the moment the topic got politically charged, it slid into false balance and treated peer-reviewed consensus and motivated contrarianism as roughly a coin flip. It took real pushing to get to a straight answer. Annoying conversations — but a good map of where the failure actually lives.*
