@@ -7,6 +7,10 @@ tags:
     - ai
     - epistemics
     - critical-thinking
+cover:
+    image: /images/balance-rigged-scale-cover.png
+    alt: "A balance scale sitting perfectly level: a tall stack of peer-reviewed books on one pan, a single small megaphone on the other — the visual of false balance."
+    relative: false
 ---
 
 ## The thing AI is genuinely great at
@@ -30,18 +34,6 @@ The "both sides" instinct mashes together three things that aren't the same:
 - Manufactured controversy, where someone with an agenda is using the topic as a wedge.
 
 All three are real, and each one calls for a different response. Blur them together and you get an answer that feels balanced while pointing you the wrong way.
-
-## Three kinds of "controversy"
-
-It helps to notice that not every fight is built the same way.
-
-Some questions are genuinely open among experts. The field itself is split, with serious, credentialed people doing real work on more than one side. The exact mechanisms behind long COVID are like this. So are the long-term effects of puberty blockers on the developing adolescent brain.
-
-Some questions are settled but still loud. The experts have largely landed, but political actors keep the fight alive anyway. Nothing changed about the evidence; the noise just kept going. Vaccine safety in general sits here. So does human-caused climate change.
-
-And some questions have a sliver of real uncertainty that's been taken over by people arguing in bad faith. There's a legitimate open question buried in there, but the people shouting about it aren't actually engaging with it. COVID origins is the clearest case. Whether it was a lab leak or a natural spillover is a real open question — but the virus wasn't engineered, that part isn't in doubt, and most of the people loudest about origins are using it to go after institutions, not to track down an answer.
-
-When an AI flattens all three into the same shape, it isn't helping you.
 
 ## The moves to watch for
 
@@ -73,7 +65,7 @@ And make it argue both ends honestly: "Give me the strongest version of the main
 
 There's a reason this keeps happening. We're living through a stretch where expertise has been knocked down on purpose, as a political strategy. People who actually spent years learning how something works — putting in the time, getting things wrong, answering to peers who'd catch them — keep getting set on the same level as people whose real talent is sounding confident.
 
-AI learns from us, and it picks this up. When the people rating its answers have spent a decade marinating in "both sides" coverage, they'll reward an answer that feels balanced even when the balance is fake. So you end up with a system that can mislead you in the calmest, most reasonable-sounding voice imaginable.
+And it picks this up in a specific, mechanical way. The frontier labs — Anthropic, which makes Claude, among them — train their models with reinforcement learning from human feedback: people are shown competing answers, pick the one they like better, and those preferences get distilled into a reward the model learns to chase. It's a genuinely powerful technique, and it's also exactly where the bias creeps in. When the raters have spent a decade marinating in "both sides" coverage, they reward the answer that feels balanced even when the balance is fake, and the model dutifully learns that sounding even-handed is what earns the high score. Train a system to chase human approval and it will reproduce human blind spots faithfully — our reflex to treat every disagreement as two reasonable sides included. So you end up with a system that can mislead you in the calmest, most reasonable-sounding voice imaginable.
 
 The fix isn't an AI that takes sides. It's one that's epistemically honest — one that'll come right out and say when a "debate" isn't being argued in good faith, when the science is solid even though the topic is radioactive, and when the controversy is mostly manufactured. Getting that out of it still falls partly on you, and on knowing what to ask.
 
