@@ -10,7 +10,7 @@ tags:
     - ai
 ---
 
-[MiniMusic](https://github.com/danielhopkins/MiniMusic) is my little menu bar app for controlling Apple Music from the keyboard: global hotkey, type, return, music. The new release, [MiniMusic 26.716.0](https://github.com/danielhopkins/MiniMusic/releases), is the biggest one yet, because the search box got a brain.
+[MiniMusic](https://github.com/danielhopkins/MiniMusic) is my little menu bar app for controlling Apple Music from the keyboard: global hotkey, type, return, music. The new release, [MiniMusic 26.716.1](https://github.com/danielhopkins/MiniMusic/releases/tag/v26.716.1), is the biggest one yet, because the search box got a brain.
 
 ## Search that understands what you meant
 
@@ -31,7 +31,9 @@ The scary part of shipping an LLM in the search path is that a tiny prompt chang
 
 The answer was **IntentBench**, a benchmark harness that compiles the app's real parser sources against the live on-device model and measures whether artist names survive the round trip across repeated iterations. It can't run in CI, so `release.sh` now refuses to ship until it has been run by hand.
 
-Full disclosure from this release's run: misspelling correction and query routing are at 100%, but the current model snapshot mangles a few composer names — "brahms piano" has a habit of coming back as Mahler, and Prokofiev sometimes turns into Puccini. Benchmarking the *previous* release's code showed the same failures, so it's drift in the underlying Apple model rather than anything in the app's prompt, and the deterministic fallback still finds these searches. It's a known soft spot I'll keep chasing.
+Full disclosure from this release's run: 139 of 140 name-survival checks passed, and query routing was perfect at 65 of 65. Composer names — the soft spot last time out, where "brahms piano" had a habit of coming back as Mahler — survived 60 of 60. I won't pretend to know exactly why: the parser's prompt learned classical catalogue numbers this cycle, and the underlying Apple model drifts on its own schedule. The benchmark measures the result, not the cause.
+
+The one miss was a pop star rather than a composer: "doja cat" came back as "Dua Cat" in one iteration out of five. Worth being clear about what that costs, because I'd been telling myself otherwise — the deterministic parser is a fallback for when the model *fails*, not for when it's confidently wrong. A mangled name sails straight through and searches for the wrong artist. That's precisely why the benchmark is a release gate and not a box I ticked once.
 
 This release also fixes the subtlest bug of the batch: the parser used one long-lived model session, which accumulates a transcript across every search. After enough searches it overflows the model's context window, every request starts throwing, and the app silently falls back to dumb search until relaunch. Now each parse gets a fresh session, with a prewarmed spare standing by so the first search stays fast.
 
