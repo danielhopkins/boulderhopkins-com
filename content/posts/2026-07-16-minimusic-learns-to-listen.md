@@ -35,6 +35,22 @@ Full disclosure from this release's run: misspelling correction and query routin
 
 This release also fixes the subtlest bug of the batch: the parser used one long-lived model session, which accumulates a transcript across every search. After enough searches it overflows the model's context window, every request starts throwing, and the app silently falls back to dumb search until relaunch. Now each parse gets a fresh session, with a prewarmed spare standing by so the first search stays fast.
 
+## Classical music, rendered like it deserves
+
+I'm a classical nerd, and nothing dates a music app faster than watching it truncate "Die Entführung aus dem Serail, K. 384: Overture" into one ellipsized line as if it were a three-word pop title. Apple Music crams classical titles into a `Work, Catalogue: Movement` string, so MiniMusic has been quietly growing a formatter that takes them back apart — and this release rounds it out.
+
+The now-playing view splits the title so the work gets its own line and the catalogue number and movement stay intact together underneath:
+
+> **Die Entführung aus dem Serail**
+> K. 384: Overture
+> W. A. Mozart · Academy of St Martin in the Fields
+
+That split isn't a dumb break on punctuation. The formatter knows the real catalogue systems — Köchel numbers for Mozart, BWV for Bach, Hoboken for Haydn, RV for Vivaldi, D. for Schubert, S. for Liszt, WoO, HWV, and a couple dozen more — and it won't split inside a parenthetical, so "(after RV 117)" stays put. Spelled-out keys become proper accidentals along the way: "C-Sharp Minor" renders as C♯ Minor, "A-Flat Major" as A♭ Major.
+
+Composers get the same care. The credit line shows *composer · performer*, with given names abbreviated to initials the way a concert program would: Wolfgang Amadeus Mozart becomes W. A. Mozart, Jean-Philippe Rameau becomes J.-P. Rameau — but Ludwig *van* Beethoven keeps his particle and Ralph Vaughan Williams keeps his whole surname. New in this release: a credit listing several composers ("Percy Grainger & Edvard Grieg") abbreviates each name instead of giving up ("P. Grainger & E. Grieg"). And when a queue entry arrives without composer or movement metadata, the app refreshes it from the catalog so the classical treatment doesn't silently disappear.
+
+Unlike the AI search, all of this is deterministic string handling with a proper unit test suite — Köchel numbers don't need a neural network, they need somebody to care.
+
 ## Quality of life
 
 A few smaller things rode along:
@@ -42,7 +58,6 @@ A few smaller things rode along:
 - **Search history.** The app now keeps a log of each search's query and what it returned — how many results per category, whether the AI parser handled it, and the top matches.
 - **Rotating search prompts.** The empty search field cycles through example queries, which doubles as discoverability for the new natural-language powers.
 - **"Playing from" context.** The player shows where the current track came from — a playlist, an album, a search.
-- **Tidier composer credits.** Multi-composer classical credits abbreviate each name instead of overflowing the line.
 - **Long result lists scroll** instead of growing the panel off the bottom of the screen.
 
 As with the [macOS 27 update](/posts/2026-06-18-updating-minimusic-for-macos-27/), I built this with [Claude Code](https://claude.ai/code) doing the heavy lifting. The code is [on GitHub](https://github.com/danielhopkins/MiniMusic), and the release is up now — existing installs will pick it up through Sparkle.
