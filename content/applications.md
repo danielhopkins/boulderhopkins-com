@@ -74,6 +74,7 @@ hidemeta: true
 
   .apps__card:nth-child(1) { animation: appsFadeUp 0.8s ease 0.15s both; }
   .apps__card:nth-child(2) { animation: appsFadeUp 0.8s ease 0.3s both; }
+  .apps__card:nth-child(3) { animation: appsFadeUp 0.8s ease 0.45s both; }
 
   .apps__card:hover {
     border-color: var(--accent-soft);
@@ -235,6 +236,35 @@ hidemeta: true
   </div>
 
   <div class="apps__grid">
+
+    <div class="apps__card">
+      <img class="apps__icon" src="/images/meld-icon.png" alt="Meld icon">
+      <div class="apps__info">
+        <h2 class="apps__name">Meld</h2>
+        <p class="apps__platform">iOS &middot; TestFlight beta</p>
+        <p class="apps__desc">
+          A score keeper for card and board games. Set up individuals or teams, high or low score wins, an optional target, and only the columns the game needs — bids, trump suits, tallies, notes — then score rounds on a shared scorepad. Players and columns can change mid-game, house rules pin to the top of the board, and finished games are archived with a winner. Includes a built-in reference for 20 classic games, from Spades and Euchre to Cribbage and Nerts.
+        </p>
+        <div class="apps__tags">
+          <span class="apps__tag">Swift</span>
+          <span class="apps__tag">SwiftUI</span>
+          <span class="apps__tag">iOS 26+</span>
+        </div>
+        <div class="apps__links">
+          <a class="apps__link" href="https://testflight.apple.com/join/FxQT6A5C" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Join the beta
+          </a>
+          <a class="apps__link" href="/posts/2026-07-21-meld-a-score-keeper-for-game-night/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2 4 4h-4zM8 13h8v2H8zm0 4h8v2H8zm0-8h3v2H8z"/></svg>
+            Read the announcement
+          </a>
+        </div>
+      </div>
+      <div class="apps__screenshot-wrap">
+        <img class="apps__screenshot" src="/images/meld-board.png" alt="Meld screenshot showing the scorepad for a game of Spades">
+      </div>
+    </div>
 
     <div class="apps__card">
       <img class="apps__icon" src="/images/minimusic-icon.png" alt="MiniMusic icon">
