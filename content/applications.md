@@ -8,227 +8,10 @@ ShowBreadCrumbs: false
 ShowPostNavLinks: false
 ShowToc: false
 hidemeta: true
+hideTitle: true
 ---
 
 {{< rawhtml >}}
-<style>
-  .post-header { display: none; }
-
-  .apps {
-    --accent: #305B90;
-    --accent-soft: rgba(48, 91, 144, 0.12);
-    --accent-softer: rgba(48, 91, 144, 0.06);
-    padding: 0.5rem 0 2rem;
-  }
-
-  [data-theme="dark"] .apps {
-    --accent: #6FA3D8;
-    --accent-soft: rgba(111, 163, 216, 0.15);
-    --accent-softer: rgba(111, 163, 216, 0.06);
-  }
-
-  /* ---- Page Header ---- */
-  .apps__header {
-    text-align: center;
-    margin-bottom: 3rem;
-    animation: appsFadeUp 0.8s ease both;
-  }
-
-  .apps .apps__title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: var(--primary);
-    line-height: 1.1;
-    margin: 0 0 0.6rem;
-    letter-spacing: -0.01em;
-  }
-
-  .apps__subtitle {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--secondary);
-    margin: 0;
-  }
-
-  /* ---- Cards Grid ---- */
-  .apps__grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  /* ---- Card ---- */
-  .apps__card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.8rem;
-    align-items: start;
-    padding: 2rem;
-    border-radius: 16px;
-    background: var(--entry);
-    border: 1px solid var(--border);
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  }
-
-  .apps__card:nth-child(1) { animation: appsFadeUp 0.8s ease 0.15s both; }
-  .apps__card:nth-child(2) { animation: appsFadeUp 0.8s ease 0.3s both; }
-  .apps__card:nth-child(3) { animation: appsFadeUp 0.8s ease 0.45s both; }
-
-  .apps__card:hover {
-    border-color: var(--accent-soft);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
-    transform: translateY(-2px);
-  }
-
-  [data-theme="dark"] .apps__card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  /* ---- Icon ---- */
-  .apps__icon {
-    width: 96px;
-    height: 96px;
-    border-radius: 22px;
-    object-fit: cover;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-  }
-
-  /* ---- Card Content ---- */
-  .apps__info {
-    min-width: 0;
-  }
-
-  .apps__name {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 0 0 0.15rem;
-    line-height: 1.2;
-  }
-
-  .apps__platform {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--secondary);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin: 0 0 0.75rem;
-  }
-
-  .apps__desc {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: var(--content);
-    line-height: 1.65;
-    margin: 0 0 1.2rem;
-  }
-
-  /* ---- Tags ---- */
-  .apps__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .apps__tag {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 400;
-    color: var(--secondary);
-    background: var(--accent-softer);
-    border: 1px solid var(--accent-soft);
-    border-radius: 100px;
-    padding: 0.3em 0.85em;
-  }
-
-  /* ---- Links ---- */
-  .apps__links {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .apps__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--accent);
-    text-decoration: none;
-    padding: 0.45em 1em;
-    border-radius: 100px;
-    border: 1px solid var(--accent-soft);
-    background: transparent;
-    transition: background 0.25s, border-color 0.25s, transform 0.25s;
-  }
-
-  .apps__link:hover {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-    transform: translateY(-1px);
-  }
-
-  .apps__link svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-    flex-shrink: 0;
-  }
-
-  /* ---- Animations ---- */
-  @keyframes appsFadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ---- Screenshot ---- */
-  .apps__screenshot-wrap {
-    grid-column: 1 / -1;
-    margin-top: 0.5rem;
-  }
-
-  .apps__screenshot {
-    width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
-    transition: transform 0.3s ease;
-  }
-
-  [data-theme="dark"] .apps__screenshot {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .apps__screenshot:hover {
-    transform: scale(1.02);
-  }
-
-  /* ---- Responsive ---- */
-  @media (max-width: 640px) {
-    .apps .apps__title { font-size: 2.2rem; }
-  }
-  @media (max-width: 540px) {
-    .apps__card {
-      grid-template-columns: 1fr;
-      text-align: center;
-      justify-items: center;
-    }
-
-    .apps__tags { justify-content: center; }
-    .apps__links { justify-content: center; }
-    .apps__screenshot { width: 220px; }
-  }
-</style>
-
 <div class="apps">
   <div class="apps__header">
     <h1 class="apps__title">Applications</h1>
@@ -292,7 +75,11 @@ hidemeta: true
         </div>
       </div>
       <div class="apps__screenshot-wrap">
-        <img class="apps__screenshot" src="/images/minimusic-screenshot.png" alt="MiniMusic screenshot showing the menu bar player">
+        <div class="apps__shots">
+          <img class="apps__screenshot apps__screenshot--alpha" src="/images/minimusic-screenshot.png" alt="MiniMusic screenshot showing the menu bar player with playback controls over the album artwork">
+          <img class="apps__screenshot apps__screenshot--alpha" src="/images/minimusic-search.png" alt="MiniMusic screenshot showing search results for a Miles Davis album">
+          <img class="apps__screenshot apps__screenshot--alpha" src="/images/minimusic-queue.png" alt="MiniMusic screenshot showing the play queue with composer credits">
+        </div>
       </div>
     </div>
 
@@ -302,7 +89,7 @@ hidemeta: true
         <h2 class="apps__name">forscore-cli</h2>
         <p class="apps__platform">macOS &middot; Command Line</p>
         <p class="apps__desc">
-          A command-line tool for managing <a href="https://forscore.co" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">forScore</a> metadata on macOS. Reads the local forScore iCloud database to let you search, organize, and manage your sheet music library from the terminal. Installable via Homebrew.
+          A command-line tool for managing <a href="https://forscore.co" target="_blank" rel="noopener noreferrer">forScore</a> metadata on macOS. Reads the local forScore iCloud database to let you search, organize, and manage your sheet music library from the terminal. Installable via Homebrew.
         </p>
         <div class="apps__tags">
           <span class="apps__tag">Rust</span>

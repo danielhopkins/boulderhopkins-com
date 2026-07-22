@@ -1,0 +1,270 @@
+/* ============================================================
+   /applications/ — the showcase grid of app cards.
+   Markup lives in content/applications.md.
+
+   Named `page-` so Hugo's sorted concat puts it after
+   editorial.css. These blocks render inside .post-content, and
+   the prose rules there (.post-content a, etc.) match at the
+   same specificity — loading last is what lets a page rule win,
+   exactly as the old inline <style> block did.
+   ============================================================ */
+
+.apps {
+  padding: 0.5rem 0 var(--sp-7);
+}
+
+/* ---- Page header ------------------------------------------- */
+
+.apps__header {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.apps .apps__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  color: var(--primary);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--sp-3);
+  letter-spacing: var(--ls-title);
+}
+
+.apps__subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--fw-light);
+  color: var(--secondary);
+  margin: 0;
+}
+
+/* ---- Grid --------------------------------------------------
+   An app card is the one place the system uses a real surface:
+   a bordered panel that lifts on hover. List entries elsewhere
+   stay hairline-separated with no box. */
+
+.apps__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+
+.apps__card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.8rem;
+  align-items: start;
+  padding: var(--sp-7);
+  border-radius: var(--radius-card);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s var(--ease),
+              box-shadow 0.3s var(--ease),
+              transform 0.3s var(--ease);
+}
+
+.apps__card:hover {
+  border-color: var(--bd-accent-soft);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* ---- Icon ---------------------------------------------------
+   `.apps img` prefix is required: PaperMod sets
+   `.post-content img { border-radius: 4px; margin: 1rem 0 }` and
+   these cards render inside .post-content, so a bare .apps__icon
+   loses and the icon renders with 4px corners and a stray margin. */
+
+.apps img.apps__icon {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-icon);
+  margin: 0;
+  object-fit: cover;
+  box-shadow: var(--shadow-icon);
+  flex-shrink: 0;
+}
+
+/* ---- Card content ------------------------------------------- */
+
+.apps__info {
+  min-width: 0;
+}
+
+.apps__name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: var(--fw-semibold);
+  color: var(--primary);
+  margin: 0 0 0.15rem;
+  line-height: 1.2;
+}
+
+.apps__platform {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  color: var(--secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.apps__desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-light);
+  color: var(--content);
+  line-height: 1.65;
+  margin: 0 0 1.2rem;
+}
+
+/* Replaces a style="" attribute that was inline on the forScore
+   link. The prose underline from .post-content a still applies,
+   as it did before. */
+.apps__desc a {
+  color: var(--bd-accent);
+  text-decoration: none;
+}
+
+/* ---- Tech tags — outlined accent pills ---------------------- */
+
+.apps__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: 1.2rem;
+}
+
+.apps__tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: var(--fw-medium);
+  color: var(--bd-accent);
+  background: transparent;
+  border: 1px solid var(--bd-accent);
+  border-radius: var(--radius-pill);
+  padding: 0.32em 0.9em;
+  letter-spacing: 0.01em;
+}
+
+/* ---- Link pills --------------------------------------------- */
+
+.apps__links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.apps__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+  color: var(--bd-accent);
+  text-decoration: none;
+  padding: var(--sp-2) 1em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--bd-accent-soft);
+  background: transparent;
+  transition: var(--transition-hover);
+}
+
+/* A pill button is a component, not prose — drop the accent underline
+   editorial.css gives links in the reading column. The inline forScore
+   link in .apps__desc keeps it. */
+.apps a.apps__link {
+  box-shadow: none;
+}
+
+.apps a.apps__link:hover {
+  background: var(--bd-accent-soft);
+  border-color: var(--bd-accent);
+  transform: translateY(-1px);
+}
+
+.apps__link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ---- Screenshots -------------------------------------------- */
+
+.apps__screenshot-wrap {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
+.apps img.apps__screenshot {
+  width: 260px;
+  border-radius: var(--radius-logo);
+  margin: 0;
+  box-shadow: var(--shadow-shot);
+  border: 1px solid var(--border);
+  transition: transform 0.3s var(--ease);
+}
+
+.apps img.apps__screenshot:hover {
+  transform: scale(1.02);
+}
+
+/* Row of shots for apps with more than one screenshot */
+.apps__shots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+/* Window captures with transparent corners: a border/box-shadow would trace a
+   rectangle past the rounded edges, so shape the shadow to the alpha instead. */
+.apps img.apps__screenshot--alpha {
+  width: 200px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.18));
+}
+
+[data-theme="dark"] .apps img.apps__screenshot--alpha {
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.45));
+}
+
+/* ---- Entrance ----------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .apps__header { animation: bdFadeUp var(--dur-enter) var(--ease) both; }
+  .apps__card:nth-child(1) { animation: bdFadeUp var(--dur-enter) var(--ease) 0.15s both; }
+  .apps__card:nth-child(2) { animation: bdFadeUp var(--dur-enter) var(--ease) 0.3s both; }
+  .apps__card:nth-child(3) { animation: bdFadeUp var(--dur-enter) var(--ease) 0.45s both; }
+  .apps__card:nth-child(n+4) { animation: bdFadeUp var(--dur-enter) var(--ease) 0.6s both; }
+}
+
+/* ---- Responsive --------------------------------------------- */
+
+@media (max-width: 640px) {
+  .apps .apps__title { font-size: 2.2rem; }
+}
+
+@media (max-width: 540px) {
+  .apps__card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .apps__tags { justify-content: center; }
+  .apps__links { justify-content: center; }
+  .apps__shots { justify-content: center; }
+
+  /* Keep the `.apps img` prefix — a media query adds no specificity,
+     so a bare .apps__screenshot would lose to the base rule above. */
+  .apps img.apps__screenshot { width: 220px; }
+  .apps img.apps__screenshot--alpha { width: 180px; }
+}

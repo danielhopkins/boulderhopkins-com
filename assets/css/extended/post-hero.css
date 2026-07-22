@@ -1,0 +1,98 @@
+/* ============================================================
+   Post cover hero — the design system's PostScreen cover variant.
+   A full-bleed cover image with the date/reading-time and serif
+   title reversed out of a bottom scrim. Rendered by
+   layouts/_default/single.html for posts that opt in with
+   `cover: { hero: true }` in front matter.
+
+   Opt-in because the system's foundations otherwise keep covers
+   inside the reading column. Best suited to a wide photograph
+   with quiet space along the bottom edge.
+   ============================================================ */
+
+.post-hero {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+
+  /* Break out of the 720px reading column to the viewport edge, and
+     pull up through .main's top padding so it sits flush under the
+     masthead. html { overflow-x: clip } in 00-tokens.css absorbs the
+     half-scrollbar overhang this leaves on each side. */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: calc(-1 * var(--gap));
+  margin-bottom: var(--sp-7);
+}
+
+.post-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Weighted harder than the design kit's 0→0.55 so reversed text
+   still clears an image with light areas at the bottom. */
+.post-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(0, 0, 0, 0.10) 0%,
+              rgba(0, 0, 0, 0) 35%,
+              rgba(0, 0, 0, 0.78) 100%);
+}
+
+.post-hero__inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 0 1.25rem var(--sp-6);
+}
+
+.post-hero__meta {
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-meta);
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.post-hero .post-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* With a hero the header below carries only breadcrumbs, so it
+   doesn't need the stock title's bottom spacing. */
+.post-hero + .post-header {
+  margin-bottom: var(--sp-5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .post-hero {
+    animation: bdFadeUp var(--dur-enter) var(--ease) both;
+  }
+}
+
+@media (max-width: 640px) {
+  .post-hero {
+    height: 240px;
+  }
+
+  .post-hero .post-hero__title {
+    font-size: 1.9rem;
+  }
+}

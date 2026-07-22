@@ -1,0 +1,157 @@
+/* ============================================================
+   boulder dan — design tokens
+   The single source of truth for brand color, type, spacing,
+   elevation and motion. Everything else in css/extended/ styles
+   against these; no page should re-declare a hex or a font stack.
+
+   Loaded first: Hugo concatenates css/extended/*.css in sorted
+   order, so the `00-` prefix keeps this ahead of the rest.
+
+   PaperMod's theme-vars.css already owns the neutral surface and
+   text ramp (--theme, --entry, --primary, --secondary, --tertiary,
+   --content, --border, --code-bg) plus the container widths
+   (--nav-width 1024px, --main-width 720px, --gap, --radius) and
+   flips them for dark mode. Those are deliberately NOT repeated
+   here — this file is the brand layer on top.
+   ============================================================ */
+
+:root {
+  /* ---- Editorial accent (the brand blue) ------------------- */
+  --bd-accent: #305B90;                        /* links, active nav, rules */
+  --bd-accent-soft: rgba(48, 91, 144, 0.12);   /* pill bg, hairline borders */
+  --bd-accent-softer: rgba(48, 91, 144, 0.06); /* hover wash */
+
+  /* ---- "Summit" mark palette (dawn sky, sun, Flatirons) ----
+     Brand moments only — the mark, favicons, cover treatments.
+     Never a page background, never a gradient wash. */
+  --bd-forest: #2d4a3e;        /* mid ridgeline / primary nature green */
+  --bd-forest-deep: #22392f;   /* front ridgeline */
+  --bd-forest-shadow: #1a2c25; /* foreground pine */
+  --bd-cream: #f5f1e8;         /* snow caps, mark-on-dark text */
+  --bd-sky-top: #24406b;       /* zenith — deep dawn blue */
+  --bd-sky-mid: #4E82BE;       /* mid sky */
+  --bd-sky-peach: #EBB4A0;     /* horizon haze */
+  --bd-sun: #F2B950;           /* the Colorado sun — warm secondary accent */
+  --bd-sun-glow: #FBD98A;      /* sun halo */
+  --bd-sun-core: #FFF0C4;      /* sun highlight */
+
+  --accent-warm: var(--bd-sun);
+  --accent-warm-soft: rgba(242, 185, 80, 0.16);
+
+  /* ---- Type families -------------------------------------- */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Menlo', 'Consolas', monospace;
+
+  --font-display: var(--font-serif); /* headings, wordmark */
+  --font-body: var(--font-sans);     /* copy, nav, meta, UI */
+
+  /* ---- Display scale (serif) ------------------------------- */
+  --fs-display: 3.25rem;   /* home hero H1 */
+  --fs-title: 2.8rem;      /* page / post titles */
+  --fs-h2: 1.75rem;        /* section heads, list-card titles */
+  --fs-h3: 1.4rem;         /* sub-heads */
+  --fs-tagline: 1.55rem;   /* italic serif tagline */
+
+  /* ---- Body scale (sans) ----------------------------------- */
+  --fs-lead: 1.05rem;      /* lead / hero subcopy */
+  --fs-body: 1.02rem;      /* article body */
+  --fs-base: 0.95rem;      /* default UI text */
+  --fs-sm: 0.92rem;        /* card summaries */
+  --fs-meta: 0.72rem;      /* uppercase meta / nav */
+
+  /* ---- Weights --------------------------------------------- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* ---- Line heights ---------------------------------------- */
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-body: 1.7;
+  --lh-ui: 1.5;
+
+  /* ---- Letter spacing -------------------------------------- */
+  --ls-display: -0.015em;  /* home hero */
+  --ls-tight: -0.005em;    /* card + section headings */
+  --ls-title: -0.01em;     /* page / post titles */
+  --ls-meta: 0.14em;       /* uppercase meta */
+  --ls-wide: 0.18em;       /* nav, pagination */
+
+  /* ---- Spacing scale --------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.45rem;   /* pill vertical padding */
+  --sp-3: 0.6rem;    /* gap between pills */
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;    /* card vertical padding */
+  --sp-6: 1.75rem;
+  --sp-7: 2.5rem;
+  --sp-8: 3rem;      /* section separation */
+
+  /* ---- Readable measures ----------------------------------- */
+  --measure-body: 60ch;    /* hero subcopy / prose */
+  --measure-narrow: 480px; /* tagline */
+
+  /* ---- Radii (--radius: 8px comes from PaperMod) ----------- */
+  --radius-sm: 4px;
+  --radius-pill: 100px;   /* tags, pagination, buttons */
+  --radius-logo: 12px;    /* monogram square */
+  --radius-card: 16px;    /* application cards */
+  --radius-icon: 22px;    /* large app icons */
+  --radius-thumb: 20px;   /* post-list thumbnails */
+
+  /* ---- Elevation (used sparingly — chrome is shadowless) --- */
+  --shadow-photo: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-photo-hover: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-medal: 0 1px 2px rgba(0, 0, 0, 0.18);
+  --shadow-icon: 0 2px 12px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-shot: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* ---- Borders --------------------------------------------- */
+  --border-hairline: 1px solid var(--bd-accent-soft);
+  --border-medal: 1px solid rgba(0, 0, 0, 0.12);
+
+  /* ---- Motion ---------------------------------------------- */
+  --ease: ease;
+  --dur-fast: 0.2s;
+  --dur-med: 0.4s;
+  --dur-enter: 0.8s;
+
+  --transition-hover: background var(--dur-fast) var(--ease),
+                      border-color var(--dur-fast) var(--ease),
+                      color var(--dur-fast) var(--ease),
+                      transform var(--dur-fast) var(--ease);
+}
+
+[data-theme="dark"] {
+  /* Accent lightens for contrast on near-black */
+  --bd-accent: #6FA3D8;
+  --bd-accent-soft: rgba(111, 163, 216, 0.15);
+  --bd-accent-softer: rgba(111, 163, 216, 0.06);
+
+  /* Shadows need more weight to read against a dark surface */
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-shot: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   MOTION — one entrance for the whole site.
+   Content rises 16px while fading in over 0.8s, staggered ~0.1s
+   down a list. Every use is gated on prefers-reduced-motion.
+   ============================================================ */
+
+@keyframes bdFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* The post cover hero breaks out of the reading column with
+   `margin-left: calc(50% - 50vw)`. Because 100vw counts the
+   scrollbar gutter, that overhangs by half a scrollbar on each
+   side. `clip` trims it without creating a scroll container, so
+   sticky positioning and anchor scrolling still behave. */
+html {
+  overflow-x: clip;
+}

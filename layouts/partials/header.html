@@ -22,7 +22,11 @@
                     <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
-                <img src="{{- site.Params.label.icon | relURL -}}" alt="" aria-label="logo"
+                {{- /* Decorative: the anchor is already labelled by the "boulder dan"
+                       wordmark text. PaperMod ships alt="" plus aria-label="logo", but a
+                       global ARIA attribute cancels the presentational role that alt=""
+                       confers, so the mark would be announced as "logo". */}}
+                <img src="{{- site.Params.label.icon | relURL -}}" alt="" aria-hidden="true"
                     height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}

@@ -14,6 +14,13 @@ params:
   assets:
     favicon: "favicon.svg"
 
+  # Masthead lockup: the "Summit" monogram beside the italic wordmark.
+  # Points at the favicon so the mark has a single source of truth —
+  # regenerating static/favicon.svg updates the header too.
+  label:
+    icon: /favicon.svg
+    iconHeight: 28
+
   defaultTheme: auto
   ShowReadingTime: true
   ShowShareButtons: false

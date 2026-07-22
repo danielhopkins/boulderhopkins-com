@@ -1,0 +1,137 @@
+/* ============================================================
+   /speaking/ — talks, workshops and podcast appearances as a
+   hairline-separated list with a "kind" pill on each entry.
+   Markup lives in content/speaking.md.
+
+   Named `page-` so it loads after editorial.css — see the note
+   in page-applications.css.
+   ============================================================ */
+
+.speaking {
+  padding: 0.5rem 0 var(--sp-7);
+}
+
+/* ---- Page header ------------------------------------------- */
+
+.speaking__header {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.speaking .speaking__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  color: var(--primary);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--sp-3);
+  letter-spacing: var(--ls-title);
+}
+
+.speaking__subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--fw-light);
+  color: var(--secondary);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* ---- Item list --------------------------------------------- */
+
+.speaking__list {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.speaking__item {
+  padding: var(--sp-5) 0;
+  border-bottom: var(--border-hairline);
+}
+
+.speaking__item:last-child {
+  border-bottom: none;
+}
+
+.speaking__kind {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: var(--fw-semibold);
+  color: var(--bd-accent);
+  background: var(--bd-accent-softer);
+  border: 1px solid var(--bd-accent-soft);
+  border-radius: var(--radius-pill);
+  padding: 0.2em 0.75em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 var(--sp-3);
+}
+
+.speaking__item-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  margin: 0 0 0.4rem;
+  letter-spacing: var(--ls-tight);
+}
+
+/* A serif heading link is a title, not prose — drop the accent
+   underline and hover wash editorial.css applies in the reading
+   column. The `.speaking` prefix is what wins that specificity
+   contest against `.post-content a`. */
+.speaking .speaking__item-title a {
+  color: var(--primary);
+  text-decoration: none;
+  box-shadow: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.speaking .speaking__item-title a:hover {
+  color: var(--bd-accent);
+  background: transparent;
+}
+
+.speaking__venue {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--primary);
+  margin: 0;
+}
+
+.speaking__meta {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: var(--fw-light);
+  color: var(--secondary);
+  letter-spacing: 0.04em;
+  margin: 0.2rem 0 0;
+}
+
+.speaking__desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--content);
+  margin: 0.7rem 0 0;
+  line-height: 1.55;
+}
+
+/* ---- Entrance ----------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .speaking__header { animation: bdFadeUp var(--dur-enter) var(--ease) both; }
+  .speaking__list   { animation: bdFadeUp var(--dur-enter) var(--ease) 0.15s both; }
+}
+
+/* ---- Responsive --------------------------------------------- */
+
+@media (max-width: 640px) {
+  .speaking .speaking__title { font-size: 2.2rem; }
+}
+
+@media (max-width: 480px) {
+  .speaking__item-title { font-size: 1.25rem; }
+}

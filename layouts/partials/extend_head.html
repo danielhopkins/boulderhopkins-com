@@ -4,7 +4,10 @@
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 
-{{- /* Editorial design fonts — used site-wide (headings, body, nav) */ -}}
+{{- /* Design system fonts — Cormorant Garamond (serif display) + Libre Franklin
+       (sans body/UI). Weights match the --fw-* tokens in css/extended/00-tokens.css;
+       Cormorant needs 500 and italic 600 so the wordmark and headings aren't
+       synthesised by the browser. */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">

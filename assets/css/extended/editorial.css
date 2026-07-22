@@ -1,20 +1,10 @@
 /* ============================================================
-   Editorial design — applies the About/Applications/Speaking
-   aesthetic to PaperMod's stock home, post list, post single,
-   and tag pages.
+   Editorial design — applies the brand to PaperMod's stock home,
+   post list, post single, and tag pages.
+
+   All values come from 00-tokens.css. If you need a color, size
+   or duration that isn't a token, add the token first.
    ============================================================ */
-
-:root {
-  --bd-accent: #305B90;
-  --bd-accent-soft: rgba(48, 91, 144, 0.12);
-  --bd-accent-softer: rgba(48, 91, 144, 0.06);
-}
-
-[data-theme="dark"] {
-  --bd-accent: #6FA3D8;
-  --bd-accent-soft: rgba(111, 163, 216, 0.15);
-  --bd-accent-softer: rgba(111, 163, 216, 0.06);
-}
 
 /* Unify background across list pages (home, /posts, /tags) and single pages.
    PaperMod's theme sets .list { background: var(--code-bg) } — the gray card.
@@ -28,28 +18,28 @@
 .first-entry.home-info {
   text-align: center;
   min-height: 0;
-  padding: 3rem 0 2rem;
-  border-bottom: 1px solid var(--bd-accent-soft);
-  margin-bottom: 3rem;
+  padding: var(--sp-8) 0 var(--sp-7);
+  border-bottom: var(--border-hairline);
+  margin-bottom: var(--sp-8);
 }
 
 .first-entry.home-info .entry-header h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 3.25rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
-  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--sp-3);
 }
 
 .first-entry.home-info .entry-content {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
   color: var(--secondary);
-  line-height: 1.5;
-  max-width: 60ch;
-  margin: 0 auto 1.75rem;
+  line-height: var(--lh-ui);
+  max-width: var(--measure-body);
+  margin: 0 auto var(--sp-6);
 }
 
 .first-entry.home-info .entry-footer {
@@ -57,18 +47,20 @@
   justify-content: center;
 }
 
-/* ---- Post list cards (first-entry + post-entry) ----------- */
+/* ---- Post list cards (first-entry + post-entry) -----------
+   A "card" here is a list entry separated by a bottom hairline
+   that washes on hover — no border box, no elevation. */
 
 .first-entry:not(.home-info),
 .post-entry {
   background: transparent;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid var(--bd-accent-soft);
-  padding: 1.5rem 0.25rem 1.75rem;
+  border-bottom: var(--border-hairline);
+  padding: var(--sp-5) var(--sp-1) var(--sp-6);
   margin: 0;
   min-height: 0;
-  transition: background 0.15s ease;
+  transition: background var(--dur-fast) var(--ease);
 }
 
 .first-entry:not(.home-info):hover,
@@ -87,13 +79,13 @@
 
 .first-entry:not(.home-info) .entry-header h1,
 .post-entry .entry-header h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  line-height: 1.25;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
   color: var(--primary);
-  margin: 0 0 0.45rem;
+  margin: 0 0 var(--sp-2);
 }
 
 /* ---- List thumbnails (app icons / post covers) ------------ */
@@ -113,12 +105,12 @@
 .entry-thumb {
   width: 88px;
   height: 88px;
-  border-radius: 20px;
+  border-radius: var(--radius-thumb);
   object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-icon);
   flex-shrink: 0;
   margin-top: 0.35rem;
-  transition: transform 0.2s ease;
+  transition: transform var(--dur-fast) var(--ease);
 }
 
 .post-entry.has-thumb:hover .entry-thumb,
@@ -127,20 +119,20 @@
 }
 
 .entry-content {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
   line-height: 1.55;
   color: var(--secondary);
-  margin: 0.35rem 0 0.6rem;
+  margin: 0.35rem 0 var(--sp-3);
 }
 
 .entry-footer {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--ls-meta);
   color: var(--secondary);
 }
 
@@ -148,85 +140,93 @@
 
 .page-header h1,
 .post-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.8rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-title);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--sp-3);
 }
 
 .post-description {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: var(--font-body);
   color: var(--secondary);
-  font-size: 1.05rem;
-  font-weight: 300;
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
 }
 
 .post-meta,
 .breadcrumbs {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--ls-meta);
   color: var(--secondary);
 }
 
 .breadcrumbs a {
-  font-size: 0.72rem;
+  font-size: var(--fs-meta);
 }
 
 /* Post body — keep readable width, serif headings, sans body */
 .post-content {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1.02rem;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
 }
 
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 600;
-  letter-spacing: -0.005em;
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-tight);
 }
 
-.post-content h2 { font-size: 1.75rem; }
-.post-content h3 { font-size: 1.4rem; }
+.post-content h2 { font-size: var(--fs-h2); }
+.post-content h3 { font-size: var(--fs-h3); }
 
 .post-content a {
   text-decoration: none;
   box-shadow: 0 1px 0 var(--bd-accent);
-  transition: background 0.2s ease;
+  transition: background var(--dur-fast) var(--ease);
 }
 
 .post-content a:hover {
   background: var(--bd-accent-softer);
 }
 
+/* Cover images sit inside the reading column with an 8px radius.
+   Scoped to .entry-cover only — a blanket `.post-content img`
+   would out-specify .apps__icon and .about__photo and flatten
+   their corners. */
+.entry-cover img {
+  border-radius: var(--radius);
+}
+
 /* ---- Section page headers (e.g. Tech Blog on /posts/) ------ */
 
 .page-header {
   text-align: center;
-  padding: 1.5rem 0 1rem;
+  padding: var(--sp-5) 0 var(--sp-4);
 }
 
 .page-header p {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   color: var(--secondary);
 }
 
-/* ---- Tag pills (/tags/) ----------------------------------- */
+/* ---- Tag pills (/tags/ and post footers) ------------------- */
 
 .terms-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 1rem 0;
+  gap: var(--sp-3);
+  padding: var(--sp-4) 0;
   max-width: 640px;
   margin: 0 auto;
 }
@@ -234,20 +234,19 @@
 .terms-tags li {
   display: inline-flex;
   margin: 0;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
 }
 
 .terms-tags a {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   color: var(--primary);
   background: var(--bd-accent-softer);
   border: 1px solid var(--bd-accent-soft);
-  border-radius: 100px;
-  padding: 0.45em 1.15em;
-  transition: background 0.2s ease, border-color 0.2s ease,
-              color 0.2s ease, transform 0.2s ease;
+  border-radius: var(--radius-pill);
+  padding: var(--sp-2) 1.15em;
+  transition: var(--transition-hover);
 }
 
 .terms-tags a:hover {
@@ -271,21 +270,20 @@
 /* ---- Pagination (prev/next) ------------------------------- */
 
 .pagination {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--ls-wide);
 }
 
 .pagination a {
   background: transparent;
   border: 1px solid var(--bd-accent-soft);
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   color: var(--secondary);
   padding: 0.5rem 1.3rem;
-  transition: background 0.2s ease, border-color 0.2s ease,
-              color 0.2s ease;
+  transition: var(--transition-hover);
 }
 
 .pagination a:hover {
@@ -294,26 +292,22 @@
   color: var(--bd-accent);
 }
 
-/* ---- Fade-up animation (matches About/Applications/Speaking) ---- */
-
-@keyframes editorialFadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+/* ---- Entrance ---------------------------------------------
+   The single bdFadeUp entrance, staggered down each list. */
 
 @media (prefers-reduced-motion: no-preference) {
   /* List pages (/posts, /tags, home) */
   .page-header,
   .first-entry.home-info,
   .terms-tags {
-    animation: editorialFadeUp 0.8s ease both;
+    animation: bdFadeUp var(--dur-enter) var(--ease) both;
   }
 
   /* Staggered list items — post list cards and tag pills */
   .post-entry,
   .first-entry:not(.home-info),
   .terms-tags li {
-    animation: editorialFadeUp 0.8s ease both;
+    animation: bdFadeUp var(--dur-enter) var(--ease) both;
     animation-delay: 0.15s;
   }
   .post-entry:nth-of-type(2),
@@ -330,12 +324,12 @@
   /* Single post page — header, meta, body */
   .post-title,
   .post-description {
-    animation: editorialFadeUp 0.8s ease both;
+    animation: bdFadeUp var(--dur-enter) var(--ease) both;
   }
   .post-description { animation-delay: 0.1s; }
-  .post-meta { animation: editorialFadeUp 0.8s ease 0.2s both; }
-  .post-content { animation: editorialFadeUp 0.8s ease 0.3s both; }
-  .post-footer { animation: editorialFadeUp 0.8s ease 0.4s both; }
+  .post-meta { animation: bdFadeUp var(--dur-enter) var(--ease) 0.2s both; }
+  .post-content { animation: bdFadeUp var(--dur-enter) var(--ease) 0.3s both; }
+  .post-footer { animation: bdFadeUp var(--dur-enter) var(--ease) 0.4s both; }
 }
 
 /* ---- Responsive ------------------------------------------- */
@@ -345,14 +339,14 @@
   .page-header h1,
   .post-title { font-size: 2.2rem; }
   .first-entry:not(.home-info) .entry-header h1,
-  .post-entry .entry-header h2 { font-size: 1.4rem; }
+  .post-entry .entry-header h2 { font-size: var(--fs-h3); }
   .first-entry.has-thumb:not(.home-info),
   .post-entry.has-thumb { gap: 0.9rem; }
   .entry-thumb {
     width: 60px;
     height: 60px;
     border-radius: 14px;
-    margin-top: 0.25rem;
+    margin-top: var(--sp-1);
   }
   .post-content h2 { font-size: 1.5rem; }
   .post-content h3 { font-size: 1.25rem; }
