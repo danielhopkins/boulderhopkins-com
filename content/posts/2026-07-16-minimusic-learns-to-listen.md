@@ -2,6 +2,7 @@
 date: '2026-07-16T10:00:00-06:00'
 draft: false
 title: 'MiniMusic Learns to Listen: On-Device AI Search'
+thumbnail: /images/minimusic-icon.png
 tags:
     - macos
     - swift

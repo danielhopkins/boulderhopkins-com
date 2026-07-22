@@ -2,6 +2,7 @@
 date: '2026-07-21T09:00:00-06:00'
 draft: false
 title: 'Meld: A Score Keeper for Game Night'
+thumbnail: /images/meld-icon.png
 tags:
     - ios
     - swift

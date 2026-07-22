@@ -2,6 +2,7 @@
 date: '2025-12-25T10:00:00-07:00'
 draft: false
 title: 'Cleaning Up My forScore Music Library'
+thumbnail: /images/forscore-cli-icon.png
 tags:
     - music
     - rust

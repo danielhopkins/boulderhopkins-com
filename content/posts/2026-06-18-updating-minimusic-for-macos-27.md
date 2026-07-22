@@ -2,6 +2,7 @@
 date: '2026-06-18T11:00:00-06:00'
 draft: false
 title: 'Updating MiniMusic for macOS 27'
+thumbnail: /images/minimusic-icon.png
 tags:
     - macos
     - swift
