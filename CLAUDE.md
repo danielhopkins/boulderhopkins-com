@@ -187,10 +187,13 @@ Full detail in `docs/design-system.md` — the short version:
 - First person singular. Warm, candid, senior-but-not-lecturing. Address the
   reader as "you" when giving advice.
 - Confident without hype; comfortable admitting uncertainty. Occasional dry humor.
-- **Specificity carries it** — real numbers and names ("$0 → $10M ARR",
+- **Specificity carries it.** Real numbers and names ("$0 → $10M ARR",
   "139 of 140 checks passed") beat abstractions.
 - Sentence case in prose, Title Case in titles, UPPERCASE wide-tracked for UI
   meta. The brand name is always lowercase: "boulder dan".
-- Em-dashes for asides, `→` for growth, curly quotes.
-- AI is a first-class subject, discussed like a practitioner — neither breathless
+- **No em-dashes.** They are the loudest tell that a machine wrote the prose.
+  Use a comma, a colon, parentheses, or two sentences. An aside that only works
+  as an em-dash usually wants to be its own sentence. `→` for growth, curly
+  quotes. En-dashes are fine in numeric ranges (9:00–9:30).
+- AI is a first-class subject, discussed like a practitioner: neither breathless
   nor dismissive.
