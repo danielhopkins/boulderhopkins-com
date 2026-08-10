@@ -37,7 +37,7 @@ How the blog is written — match this voice in any generated copy.
 - **Specificity:** Real numbers and names carry the writing — "$0 → $10M ARR," "139 of 140 name-survival checks passed," "Coca-Cola, McDonald's, and ITV." Prefer a concrete example over an abstraction.
 - **AI-forward framing:** AI is a first-class subject and tool, discussed like an experienced practitioner — neither breathless nor dismissive. Names tools directly (Claude Code, Apple Foundation Models).
 - **Emoji:** **None.** The brand never uses emoji. Personality comes from serif type, the monogram, and the medal bars — not glyphs.
-- **Punctuation:** Em-dashes for asides. Arrows (`→`) for growth/transformation. Curly quotes.
+- **Punctuation:** **No em-dashes.** They are the loudest tell that a machine wrote the prose, and they pile up fast in generated copy. Set an aside with a comma, a colon, or parentheses, or break it into its own sentence, which is usually what it wanted to be. Arrows (`→`) for growth/transformation. Curly quotes. En-dashes stay for numeric ranges ("9:00–9:30 AM").
 
 ## VISUAL FOUNDATIONS
 
